@@ -1,1 +1,269 @@
-/* место для вашего кода */
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  min-height: 290px;
+  padding: 0 50px;
+  font-size: 18px;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 19px;
+  text-transform: lowercase;
+  list-style-type: circle;
+}
+
+.header__links-list-item {
+  margin-left: 14px;
+}
+
+.header__links-list-item:first-of-type {
+  margin-left: 0;
+  list-style: none;
+}
+
+.header__link_active {
+  text-decoration: none;
+  cursor: default;
+}
+
+.header__logo {
+  display: inline-block;
+  width: 135px;
+  height: 105px;
+}
+
+.section__heading {
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-style: normal;
+  line-height: 1.35;
+}
+
+.header__address {
+  justify-self: end;
+  max-width: 235px;
+}
+
+.cover {
+  position: relative;
+  z-index: 0;
+  min-height: 757px;
+  padding: 171px 50px 50px;
+  color: #fff;
+  background-image: url("../images/cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgb(0 0 0 /0.6);
+}
+
+.cover__title {
+  /*Убираем лишний промежуток, мешающий выравниванию из-за letter-spacing*/
+  margin-right: -0.3em;
+  margin-bottom: 106px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 1.1;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.aligned-text {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.aligned-text_left {
+  text-align: left;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+}
+
+.cover__description-text {
+  line-height: 1.3;
+  text-transform: uppercase;
+  word-spacing: 0.85em;
+}
+
+.cover__bet-button {
+  width: 256px;
+  height: 51px;
+  border: 1px solid #fff;
+  padding: 0;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: transparent;
+  appearance: none;
+}
+
+.cover__bet-button:hover {
+  cursor: pointer;
+}
+
+.lots {
+  padding: 183px 24px 120px;
+}
+
+.lots__title {
+  margin-bottom: 27px;
+  margin-left: 40px;
+}
+
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 334px;
+  /*Тут указала height, а не min-heigh как в постановке,
+  чтоб высота карточки при большом тексте не скакала и не ломала лендинг
+  Переполнение текста обработала
+  */
+  height: 596px;
+  padding: 48px 40px;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+}
+
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+}
+
+.card__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-decoration: underline 1px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  /*Обработка ситуации переполнения блока текста*/
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 1.2;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 15;
+}
+
+.lots__look-more-link {
+  margin-left: 40px;
+  font-size: 20px;
+  text-transform: lowercase;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  gap: 25px;
+  padding: 35px 24px 180px;
+}
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 64px 46px 62px;
+  background-color: #000;
+}
+
+.about__title {
+  margin: 100px 0;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 51px 82px;
+  font-size: 18px;
+}
+
+.footer__address {
+  max-width: 240px;
+}
+
+.footer__links-list {
+  text-align: center;
+  text-transform: lowercase;
+  list-style: none;
+}
+
+.footer__link_active {
+  text-decoration: none;
+  cursor: default;
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+}
+
+.footer__social-list-item {
+  width: 48px;
+  height: 48px;
+}
